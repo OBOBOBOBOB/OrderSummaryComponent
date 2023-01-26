@@ -1,0 +1,162 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 100%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: url("./images/pattern-background-desktop.svg"), var(--pale-blue);
+  position: top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-height: 700px) {
+  main {
+    padding-block: 3rem;
+    height: 100%;
+  }
+}
+
+.container {
+  max-width: 420px;
+  height: 620px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.img > img {
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+  text-align: center;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+
+.plan {
+  display: flex;
+  column-gap: 1.75rem;
+  align-items: center;
+  background: var(--very-pale-blue);
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: grid;
+  gap: 1.55rem;
+}
+
+.details {
+  color: var(--dark-blue);
+  opacity: 0.75;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.annual {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.price {
+  font-size: 0.95rem;
+}
+
+.plan-start {
+  display: flex;
+  gap: 1rem;
+}
+
+.plan-change {
+  display: flex;
+  text-align: right;
+}
+
+.plan-details {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.change {
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+.change:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.change:active {
+  transform: scale(1);
+}
+
+.button-1 {
+  background: var(--bright-blue);
+  padding: 1rem;
+  color: var(--white);
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0 15px 15px hsla(245, 75%, 52%, 0.25);
+}
+
+.button-1:hover {
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.button-1:active {
+  transform: scale(1);
+}
+
+.button-2 {
+  color: var(--dark-blue);
+}
+
+.button-2:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.button-2:active {
+  transform: scale(1);
+}
